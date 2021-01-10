@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/reset.css" />
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -16,67 +17,161 @@
     <title>Astrozoders</title>
   </head>
   <body>
-    <div id= "header" class="w3-bar w3-purple">
-      <a href="index.html" id="color" class="w3-bar-item w3-button"><img src="https://img.icons8.com/color/48/000000/bright-moon.png"/>Home</a>
-      <a href="aries.html" id="color" class="w3-bar-item w3-button w3-yellow"><img src="https://img.icons8.com/emoji/48/000000/aries-emoji.png"/>Aries</a>
-      <a href="taurus.html" id="color" class="w3-bar-item w3-button w3-orange"><img src="https://img.icons8.com/emoji/48/000000/taurus-emoji.png"/>Taurus</a>
-      <a href="gemini.html" id="color" class="w3-bar-item w3-button w3-red"><img src="https://img.icons8.com/emoji/48/000000/gemini-emoji.png"/>Gemini</a>
-      <a href="cancer.html" id="color" class="w3-bar-item w3-button w3-pink"><img src="https://img.icons8.com/emoji/48/000000/cancer-emoji.png"/>Cancer</a>
-      <a href="leo.html" id="color" class="w3-bar-item w3-button w3-deep-purple"><img src="https://img.icons8.com/emoji/48/000000/leo-emoji.png"/>Leo</a>
-      <a href="virgo.html" id="color" class="w3-bar-item w3-button w3-blue"><img src="https://img.icons8.com/emoji/48/000000/virgo-emoji.png"/>Virgo</a>
-      <a href="libra.html" id="color" class="w3-bar-item w3-button w3-aqua"><img src="https://img.icons8.com/emoji/48/000000/libra-emoji.png"/>Libra</a>
-      <a href="scorpio.html" id="color" class="w3-bar-item w3-button w3-green"><img src="https://img.icons8.com/emoji/48/000000/scorpio-emoji.png"/>Scorpio</a>
-      <a href="sagitarius.html" id="color" class="w3-bar-item w3-button w3-lime"><img src="https://img.icons8.com/emoji/48/000000/sagittarius-emoji.png"/>Sagitarius</a>
-      <a href="capricorn.html" id="color" class="w3-bar-item w3-button w3-light-green"><img src="https://img.icons8.com/emoji/48/000000/capricorn-emoji.png"/>Capricorn</a>
-      <a href="aquarius.html" id="color" class="w3-bar-item w3-button w3-amber"><img src="https://img.icons8.com/emoji/48/000000/aquarius-emoji.png"/>Aquarius</a>
-      <a href="pisces.html" id="color"  class="w3-bar-item w3-button w3-deep-orange piscesNav"><img src="https://img.icons8.com/emoji/48/000000/pisces-emoji.png"/>Pisces</a>      
-      <div class="w3-dropdown-hover">
+    <div class="w3-row">
+      <!-- <div id= "header" class="w3-bar w3-purple"> -->
+      <!-- <a href="index.html" id="color" class="w3-bar-item w3-button"><img src="https://img.icons8.com/color/48/000000/bright-moon.png"/>Home</a> -->
+      <div class="w3-col s1">
+        <div class="signs">
+          <a
+            href="aries.html"
+            id="color"
+            class="w3-bar-item w3-button w3-yellow"
+            ><img src="https://img.icons8.com/emoji/48/000000/aries-emoji.png"
+          /></a>
+          <div class="div-aries">Aries</div>
         </div>
       </div>
+      <div class="w3-col s1">
+        <a href="taurus.html" id="color" class="w3-bar-item w3-button w3-orange"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/taurus-emoji.png"
+          />Taurus</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a href="gemini.html" id="color" class="w3-bar-item w3-button w3-red"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/gemini-emoji.png"
+          />Gemini</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a href="cancer.html" id="color" class="w3-bar-item w3-button w3-pink"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/cancer-emoji.png"
+          />Cancer</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a
+          href="leo.html"
+          id="color"
+          class="w3-bar-item w3-button w3-deep-purple"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/leo-emoji.png"
+          />Leo</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a href="virgo.html" id="color" class="w3-bar-item w3-button w3-blue"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/virgo-emoji.png"
+          />Virgo</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a href="libra.html" id="color" class="w3-bar-item w3-button w3-aqua"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/libra-emoji.png"
+          />Libra</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a href="scorpio.html" id="color" class="w3-bar-item w3-button w3-green"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/scorpio-emoji.png"
+          />Scorpio</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a
+          href="sagitarius.html"
+          id="color"
+          class="w3-bar-item w3-button w3-lime"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/sagittarius-emoji.png"
+          />Sagitarius</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a
+          href="capricorn.html"
+          id="color"
+          class="w3-bar-item w3-button w3-light-green"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/capricorn-emoji.png"
+          />Capricorn</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a
+          href="aquarius.html"
+          id="color"
+          class="w3-bar-item w3-button w3-amber"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/aquarius-emoji.png"
+          />Aquarius</a
+        >
+      </div>
+      <div class="w3-col s1">
+        <a
+          href="pisces.html"
+          id="color"
+          class="w3-bar-item w3-button w3-deep-orange"
+          ><img
+            src="https://img.icons8.com/emoji/48/000000/pisces-emoji.png"
+          />Pisces</a
+        >
+      </div>
+      <!-- <div class="w3-dropdown-hover"></div> -->
     </div>
-  <div id="h1" class="w3-row w3-purple">
-    <h1>Daily Horoscope</h1>
-  </div>
-    
-    <div id="sidebar" class="w3-sidebar w3-brown w3-card" style="width:200px">
+
+    <div id="h1" class="w3-row w3-purple">
+      <h1>Daily Horoscope</h1>
+    </div>
+
+    <div id="sidebar" class="w3-sidebar w3-brown w3-card" style="width: 200px">
       <div class="w3-dropdown-click">
         <button class="w3-button" onclick="myDropFunc()">
           <select class="browser-default">
             <option value="" disabled selected>Birth day</option>
-            <option value="1"> 1</option>
-            <option value="2"> 2</option>
-            <option value="3"> 3</option>
-            <option value="4"> 4</option>
-            <option value="5"> 5</option>
-            <option value="6"> 6</option>
-            <option value="7"> 7</option>
-            <option value="8"> 8</option>
-            <option value="9"> 9</option>
-            <option value="10"> 10</option>
-            <option value="11"> 11</option>
-            <option value="12"> 12</option>
-            <option value="13"> 13</option>
-            <option value="14"> 14</option>
-            <option value="15"> 15</option>
-            <option value="16"> 16</option>
-            <option value="17"> 17</option>
-            <option value="18"> 18</option>
-            <option value="19"> 19</option>
-            <option value="20"> 20</option>
-            <option value="21"> 21</option>
-            <option value="22"> 22</option>
-            <option value="23"> 23</option>
-            <option value="24"> 24</option>
-            <option value="25"> 25</option>
-            <option value="26"> 26</option>
-            <option value="27"> 27</option>
-            <option value="28"> 28</option>
-            <option value="29"> 29</option>
-            <option value="30"> 30</option>
-            <option value="31"> 31</option>
-          </select></button>
-        <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
-        </div>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+        </button>
+        <div
+          id="demoDrop"
+          class="w3-dropdown-content w3-bar-block w3-white w3-card-4"
+        ></div>
       </div>
       <div class="w3-dropdown-click">
         <button class="w3-button" onclick="myDropFunc()">
@@ -94,9 +189,12 @@
             <option value="October">October</option>
             <option value="November">November</option>
             <option value="December">December</option>
-          </select> </button>
-        <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
-        </div>
+          </select>
+        </button>
+        <div
+          id="demoDrop"
+          class="w3-dropdown-content w3-bar-block w3-white w3-card-4"
+        ></div>
       </div>
       <div class="w3-dropdown-click">
         <button class="w3-button" onclick="myDropFunc()">
@@ -105,9 +203,12 @@
             <option value="1">Spanish</option>
             <option value="2">German</option>
             <option value="3">French</option>
-          </select></button>
-        <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
-        </div>
+          </select>
+        </button>
+        <div
+          id="demoDrop"
+          class="w3-dropdown-content w3-bar-block w3-white w3-card-4"
+        ></div>
       </div>
       <!-- <input placeholder="First name" type="text"> -->
       <button id="submit" class="w3-button w3-purple">Submit</button>
@@ -115,11 +216,20 @@
 
     <div class="w3-row">
       <div class="w3-col m6 w3-center">
-      <img id= "pic" src="./assets/astrology.jpg" alt="zodiac wheel" width="450px" height="300px">
+        <img
+          id="pic"
+          src="./assets/astrology.jpg"
+          alt="zodiac wheel"
+          width="450px"
+          height="300px"
+        />
       </div>
     </div>
-  
-<footer class="footer"><a href="https://icons8.com/icon/2FBe9fua6GC2/aries">Aries icon by Icons8</a>
-</footer>
+
+    <footer class="footer">
+      <a href="https://icons8.com/icon/2FBe9fua6GC2/aries"
+        >Aries icon by Icons8</a
+      >
+    </footer>
   </body>
 </html>
