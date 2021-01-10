@@ -1,16 +1,21 @@
 html {
   background: url(cosmos.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 #color {
-  width: 98px;
-  max-width: auto;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
 }
-#header {
+#color:hover {
+  filter: brightness(150%);
+}
+.signs {
   height: 80px;
+  width: 100%;
+}
+.div-aries {
+  text-align: center;
 }
 
 .footer {
@@ -18,7 +23,7 @@ html {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(130, 151, 196);
+  background-color: rgb(0, 0, 0);
   color: white;
   text-align: center;
 }
@@ -40,4 +45,5 @@ html {
   text-decoration: underline;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
+  margin-top: 15px;
 }
