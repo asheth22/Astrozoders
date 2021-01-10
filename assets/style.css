@@ -9,6 +9,7 @@ html {
   width: 98px;
   max-width: auto;
 }
+
 #header {
   height: 80px;
 }
@@ -18,7 +19,7 @@ html {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(130, 151, 196);
+  background-color: rgb(0, 0, 0);
   color: white;
   text-align: center;
 }
@@ -40,4 +41,8 @@ html {
   text-decoration: underline;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+.piscesNav {
+  margin-right: 10px;
+  width: 100%;
 }
