@@ -4,7 +4,6 @@ html {
   background-size: cover;
 }
 .color {
-  /* filter: brightness(150%);   */
   transition: all 0.2s ease-in-out;
   background-color: transparent;
   width: 100%;
@@ -61,22 +60,39 @@ html {
   text-align: center;
 }
 
-#pic {
-  margin-top: 50px;
-  margin-left: 420px;
+#aries:hover {
+  background-color: #ffeb3b !important;
 }
-#submit {
-  margin-left: 40px;
+#taurus:hover {
+  background-color: #ff9800 !important;
 }
-#sidebar {
-  margin-top: 50px;
-  background-color: transparent !important;
+#leo:hover {
+  background-color: #520748 !important;
 }
-#h1 {
-  text-align: center;
-  background-color: transparent !important;
-  text-decoration: underline;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(255, 255, 255);
-  margin-top: 15px;
+#capricorn:hover {
+  background-color: #71c018 !important;
+}
+#libra:hover {
+  background-color: #1a8bf5 !important;
+}
+#scorpio:hover {
+  background-color: #0d9482 !important;
+}
+#cancer:hover {
+  background-color: #af347c !important;
+}
+#sagitarius:hover {
+  background-color: #077446 !important;
+}
+#aquarius:hover {
+  background-color: #e29d35 !important;
+}
+#pisces:hover {
+  background-color: #b46e06 !important;
+}
+#virgo:hover {
+  background-color: #130972 !important;
+}
+#gemini:hover {
+  background-color: #bd1a15 !important;
 }
