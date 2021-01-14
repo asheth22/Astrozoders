@@ -1,8 +1,27 @@
+var today = dayjs();
+today = today.format('MM/DD/YYYY');
+var full_name = ""; 
+   
+function clear() {
+    console.log("inside clear");
+    $(".curr-hor").empty(); 
+}
 
 $(".sign").on("click", function (event) {
     console.log("event listner activated");
-    // event.preventdefault();
-    // console.log(event);
+    full_name =  $("#name").val().trim();
+    console.log("Name entered: ", full_name, "type name is: ", typeof (full_name));
+    if (full_name === "") {
+        console.log("Name is not entered");
+        $('.modal').modal();    
+    }
+    clear();
+    if (full_name === "") {
+        console.log("Calling modal");         
+        $('.modal').modal('open');
+        
+        return;
+    }
     console.log(event.target.id);
     console.log(this.id);
     var queryURL = "https://aztro.sameerkumar.website?";
@@ -20,11 +39,36 @@ $(".sign").on("click", function (event) {
         type:'POST',
         url:'https://aztro.sameerkumar.website?sign=aries&day=today',
         url: queryURL,        
-        success:function(data){
-        console.log(data);
+        success:function(horData){
+            console.log(horData);
+            updatePage(horData, sign);
         }
          });
 });
+
+function updatePage(horData, sign) {
+
+    sign = sign.toUpperCase();
+    
+    // var name = $("#name").val().trim(); 
+    var $currentHorEl = $("<ul>");
+    $currentHorEl.addClass("curr-hor"); 
+    $("#horoscope").append($currentHorEl);
+
+    console.log(horData);
+    var color = horData.color;
+    var $currentHorItem = $("<li>");
+    $(".curr-hor").append($currentHorItem);
+    $currentHorItem.append("<h6> Hello " + full_name + "!!. This is your Horoscope for " + today + "</h6>" + "<br>"); 
+    $currentHorItem.append("<h6> Your sun sign is " + sign + " based on your birthday between " + horData.date_range + "</h6>" + "<br>"); 
+    $currentHorItem.append("<h6>" + horData.description + "</h6>" + "<br>"); 
+    $currentHorItem.append("<h6> You will feel " + horData.mood + " today </h6>" + "<br>"); 
+    $currentHorItem.append("<h6> Your lucky color is: " + horData.color + "</h6>" + "<br>"); 
+    $currentHorItem.append("<h6> Your lucky number is: " + horData.lucky_number + "</h6>" + "<br>"); 
+    $currentHorItem.append("<h6> Your lucky time is: " + horData.lucky_time + "</h6>" + "<br>"); 
+    console.log("Color is: ", color);
+}
+
 
 
 
