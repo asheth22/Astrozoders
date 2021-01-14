@@ -5,9 +5,10 @@ html {
 }
 .color {
   transition: all 0.2s ease-in-out;
-  background-color: transparent;
+  /* background-color: transparent; */
   width: 100%;
   color: white;
+  border-top-right-radius: 30px;
 }
 .color-aries:hover {
   background-color: #ffeb3b !important;
@@ -95,4 +96,65 @@ html {
 }
 #gemini:hover {
   background-color: #bd1a15 !important;
+}
+#about {
+  color: white;
+  font-size: larger;
+  display: flex;
+  margin: auto;
+  margin-left: 10px;
+  /* margin-top: 10px; */
+  text-align: left;
+  justify-content: lwft;
+  text-justify: distribute;
+  
+}
+
+.signs {
+color: ivory;
+    
+text-align: center;
+justify-content: center; 
+
+}
+
+.daily {
+color: ivory;    
+
+
+}
+
+li {
+list-style-type: none;
+}
+
+.w3-card {
+float: left;
+display: inline;
+max-width: 40%;
+min-width: 40%;
+margin-left: 5%; 
+margin-right: 5%;
+margin-bottom: 2%;
+
+}
+
+.w3-card p {
+font-size: smaller;
+}
+
+
+#name {
+border: black 1px solid;
+background-color: ivory;
+/* max-width: 80%; */
+max-height: 30px;
+}
+
+.modal-content {
+color: black;
+}
+
+#name {
+  width: 75%;
 }
