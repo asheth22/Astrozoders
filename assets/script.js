@@ -86,8 +86,22 @@ function updatePage(horData, sign) {
     $currentHorItem.append("<h6> Your lucky number is: " + horData.lucky_number + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky time is: " + horData.lucky_time + "</h6>" + "<br>"); 
     console.log("Color is: ", color);
+    if (window.document.title !== "Astrozoders") {
+        tarot(); 
+    }
 }
 
+function tarot() {
+    $.ajax({
+        type:'GET',
+        // url: 'https://rws-cards-api.herokuapp.com/api/v1/cards/search?meaning=peace',
+        url: 'https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=10',
+        // url: queryURL,        
+        success:function(tarotData){
+            console.log(tarotData);            
+        }
+         });
+}
 
 
 
