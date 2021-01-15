@@ -2,26 +2,29 @@ var today = dayjs();
 today = today.format('MM/DD/YYYY');
 var full_name = ""; 
    
+
+    $(document).ready(function(){ 
+        $('.modal').modal();
+    
+    })
+
 function clear() {
     console.log("inside clear");
     $(".curr-hor").empty(); 
 }
+
 
 $(".sign").on("click", function (event) {
     console.log("event listner activated");
     full_name =  $("#name").val().trim();
     console.log("Name entered: ", full_name, "type name is: ", typeof (full_name));
     if (full_name === "") {
-        console.log("Name is not entered");
-        $('.modal').modal();    
-    }
-    clear();
-    if (full_name === "") {
-        console.log("Calling modal");         
+        console.log("Name is not entered");        
         $('.modal').modal('open');
-        
         return;
     }
+    clear();
+    
     console.log(event.target.id);
     console.log(this.id);
     var queryURL = "https://aztro.sameerkumar.website?";
@@ -62,7 +65,7 @@ function updatePage(horData, sign) {
     $currentHorItem.append("<h6> Hello " + full_name + "!!. This is your Horoscope for " + today + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your sun sign is " + sign + " based on your birthday between " + horData.date_range + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6>" + horData.description + "</h6>" + "<br>"); 
-    $currentHorItem.append("<h6> You will feel " + horData.mood + " today </h6>" + "<br>"); 
+    $currentHorItem.append("<h6> Your would be in " + horData.mood + " mood today </h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky color is: " + horData.color + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky number is: " + horData.lucky_number + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky time is: " + horData.lucky_time + "</h6>" + "<br>"); 
