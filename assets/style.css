@@ -152,3 +152,22 @@ li {
 #name {
   width: 75%;
 }
+#tarot-layout {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+  justify-content: center;
+  
+}
+.card {
+  max-height: 80%;
+  max-width: 80%;
+}
+#pick {
+  color: white;
+}
+#tarot-desc{
+  color: white;
+}
+
