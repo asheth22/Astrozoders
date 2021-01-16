@@ -4,14 +4,16 @@ var full_name = "";
 var index = true; 
 var tarotDesc = [];
 var tarotName = [];
+var historySign; 
+var historyName;   
 var modalFlag = true;
-
-
-   
+var count = 0;
+var tarotID; 
+  
 
     $(document).ready(function(){ 
-        // $('.modal').modal();
-        console.log(window.document.title);
+        
+         console.log(window.document.title);
         if (window.document.title !== "Tarot") {
             if (window.document.title !== "Astrozoders") {
                 var sign = window.document.title;
@@ -20,6 +22,16 @@ var modalFlag = true;
                 index = false;
                 console.log("index flag set to: ", index);
                 buildURL(sign);
+            }
+            else { 
+                if (localStorage.getItem('name') !== undefined) {
+                    historySign = JSON.parse(localStorage.getItem('sign')); 
+                    historyName = JSON.parse(localStorage.getItem('name'))
+                    console.log(historySign, " ", historyName); 
+                    sign = historySign; 
+                    buildURL(sign); 
+                   
+                }
             }
         }
         else {
@@ -33,7 +45,10 @@ function clear() {
 }
 
 $(".sign").on("click", function (event) {
-
+    localStorage.clear(); 
+    historyName =  $("#name").val().trim();
+    // historySign = ""; 
+    console.log("local storage cleared: ", localStorage.getItem('nam'), "historyname: ", historyName);
     var sign = this.id;
     buildURL(sign);
 
@@ -42,13 +57,21 @@ function buildURL(sign) {
 
     console.log("event listner activated");
     if (index) {
-        full_name = $("#name").val().trim();
-        console.log("Name entered: ", full_name, "type name is: ", typeof (full_name));
-        if (full_name === "") {
-            console.log("Name is not entered");
-            $('.modal').modal();
-            $('.modal').modal('open');
-            return;
+        
+        if (historyName === null ) {          
+            
+            full_name = $("#name").val().trim();
+            console.log("Name entered: ", full_name, "type name is: ", typeof (full_name));
+            if (full_name === "") {
+                console.log("Name is not entered");
+                $('.modal').modal();
+                $('.modal').modal('open');
+                return;
+            }
+        }
+        else {
+            full_name = historyName; 
+            $("#name").val(full_name);      
         }
     }    
     clear();    
@@ -79,7 +102,7 @@ function updatePage(horData, sign) {
 
     sign = sign.toUpperCase();
     
-    // var name = $("#name").val().trim(); 
+    
     var $currentHorEl = $("<ul>");
     $currentHorEl.addClass("curr-hor"); 
     $("#horoscope").append($currentHorEl);
@@ -91,7 +114,7 @@ function updatePage(horData, sign) {
     $currentHorItem.append("<h6> Hello " + full_name + "!!. This is your Horoscope for " + today + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your sun sign is " + sign + " based on your birthday between " + horData.date_range + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6>" + horData.description + "</h6>" + "<br>"); 
-    $currentHorItem.append("<h6> Your will be " + horData.mood + " today </h6>" + "<br>"); 
+    $currentHorItem.append("<h6> Mood " + horData.mood  + " </h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky color is: " + horData.color + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky number is: " + horData.lucky_number + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky time is: " + horData.lucky_time + "</h6>" + "<br>"); 
@@ -99,14 +122,23 @@ function updatePage(horData, sign) {
     if (window.document.title !== "Astrozoders") {
         tarot(); 
     }
+    if (index) {
+        
+        historySign = sign;
+        historyName = full_name;
+        console.log("type of historysing: ", typeof(historySign), "type of name: ",typeof(historyName));
+        historySign = JSON.stringify(historySign);        
+        localStorage.setItem('sign', historySign);
+        historyName = JSON.stringify(historyName);        
+        localStorage.setItem('name', historyName);
+
+    }
 }
 function tarot() {
     console.log("Inside tarot function");
     $.ajax({
-        type:'GET',
-        // url: 'https://rws-cards-api.herokuapp.com/api/v1/cards/search?meaning=peace',
-        url: 'https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=16',
-        // url: queryURL,        
+        type:'GET',        
+        url: 'https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=16',               
         success:function(tarotData){
             console.log(tarotData);
             updatetarot(tarotData); 
@@ -124,17 +156,33 @@ function updatetarot(tarotData) {
     }
 } 
 $(".tarot").on("click", function (event) {
-    var count = 0; 
-    var index = this.id; 
-    console.log(event.target);
-    console.log(this);
-    console.log($(this).children().children("p").html());
-    if ((count%2 == 0) &&  modalFlag) {
-        modalFlag = false;    
+    if (tarotID !== this.id) {
+        tarotID = this.id
+        console.log($(this).attr("data-state"));
+        var index = this.id;
+        
+        console.log(this);
+        console.log($(this).children().children("p").html());
+            
+        var pEl =  ($(this).children().children("p"));
+        console.log("p Element: ", pEl, "length: ", pEl [0].length);
+        $(".modal-content").children("p").empty(); 
         $(this).children().children("p").html(tarotName[index])
         $(".modal-content").append("<p>" + tarotDesc[index] + "</p>");
-        $('.modal').modal();
-        $('#modal1').modal('open');
-        count++; 
-}    
+        console.log($(".modal-content"));
+        if (($(this).attr("data-state")) === "close") {
+            $('.modal').modal();
+            $('#modal1').modal('open');
+            $(this).attr("data-state", "open");
+        }
+        else {
+            $(this).attr("data-state", "close");
+        }
+    }       
+    else {
+        console.log("Card Closed");
+        tarotID = ""; 
+        $(".modal-content").children("p").empty(); 
+        $(this).attr("data-state", "close");
+    }
 });       
