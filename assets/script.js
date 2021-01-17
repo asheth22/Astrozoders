@@ -16,19 +16,25 @@ var tarotID;
         $('.sidenav').sidenav();
          console.log(window.document.title);
         if (window.document.title === "Tarot") {
+            console.log("On Tarot Page"); 
             tarot();
         }
         else if (window.document.title === "Astrozoders") {
-            if (!localStorage.getItem('name')) {
+            index = true;
+            var name = JSON.parse(localStorage.getItem('name')); 
+            console.log("On Main Page ", name); 
+            if (name !== null) {
                 historySign = JSON.parse(localStorage.getItem('sign')); 
                 historyName = JSON.parse(localStorage.getItem('name'))
+                $("#name").val(historyName);
                 console.log(historySign, " ", historyName); 
                 sign = historySign; 
                 buildURL(sign); 
-                index = true;
+                
             }            
         } 
         else { 
+            console.log("On Sign Page"); 
             var sign = window.document.title;
             console.log("Sign from title is: ", sign);
             console.log("index flag set to: ", index);
@@ -46,33 +52,23 @@ function clear() {
 
 $(".sign").on("click", function (event) {
     localStorage.clear(); 
-    historyName =  $("#name").val().trim();
     
-    console.log("local storage cleared: ", localStorage.getItem('nam'), "historyname: ", historyName);
     var sign = this.id;
     buildURL(sign);
 
 }); 
 function buildURL(sign) {
 
-    console.log("event listner activated");
+    console.log("Inside buildURL");
     if (index) {
         console.log("index: ", index); 
-        console.log("historyName: ", historyName);
-        if (historyName === null ) {          
-            
-            full_name = $("#name").val().trim();
-            console.log("Name entered: ", full_name, "type name is: ", typeof (full_name));
-            if (full_name === "") {
-                console.log("Name is not entered");
-                $('.modal').modal();
-                $('.modal').modal('open');
-                return;
-            }
-        }
-        else {
-            full_name = historyName; 
-            $("#name").val(full_name);      
+        full_name = $("#name").val().trim();
+        console.log("Name input: ", full_name);              
+        if (full_name === "") {
+            console.log("Name is not entered");
+            $('.modal').modal();
+            $('.modal').modal('open');
+            return;
         }
     }    
     clear();    
@@ -115,7 +111,7 @@ function updatePage(horData, sign) {
     $currentHorItem.append("<h6> Hello " + full_name + "!!. This is your Horoscope for " + today + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your sun sign is " + sign + " based on your birthday between " + horData.date_range + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6>" + horData.description + "</h6>" + "<br>"); 
-    $currentHorItem.append("<h6> Mood " + horData.mood  + " </h6>" + "<br>"); 
+    $currentHorItem.append("<h6> Mood: " + horData.mood  + " </h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky color is: " + horData.color + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky number is: " + horData.lucky_number + "</h6>" + "<br>"); 
     $currentHorItem.append("<h6> Your lucky time is: " + horData.lucky_time + "</h6>" + "<br>"); 
