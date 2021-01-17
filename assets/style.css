@@ -1,5 +1,5 @@
 
-html {
+.background {
   background: url(./photos/zodiac.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -206,22 +206,18 @@ p {
   margin-top: 20px;
 }
 
-@media (max-width: 690px) {
+/* @media (max-width: 690px) {
   .s1 {
     font-size: 1rem;
   }
-
-  html {
-    background: url(./assets/photos/cosmos.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;      
-  }
-  }
-
+} */
+@media (max-width: 690px) {
+  .background {
+  background: url(./photos/cosmos.jpg) no-repeat center center fixed;
+}
+}
   @media only screen and (min-width: 993px) {
   .container {
-      width: 90%;
+     width: 90%;
   }
 }
