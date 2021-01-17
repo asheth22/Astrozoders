@@ -1,7 +1,7 @@
 var today = dayjs();
 today = today.format('MM/DD/YYYY');
 var full_name = ""; 
-var index = true; 
+var index;  
 var tarotDesc = [];
 var tarotName = [];
 var historySign; 
@@ -15,28 +15,27 @@ var tarotID;
         
         $('.sidenav').sidenav();
          console.log(window.document.title);
-        if (window.document.title !== "Tarot") {
-            if (window.document.title !== "Astrozoders") {
-                var sign = window.document.title;
-                console.log("Sign from title is: ", sign);
-                console.log("index flag set to: ", index);
-                index = false;
-                console.log("index flag set to: ", index);
-                buildURL(sign);
-            }
-            else { 
-                if (localStorage.getItem('name') !== undefined) {
-                    historySign = JSON.parse(localStorage.getItem('sign')); 
-                    historyName = JSON.parse(localStorage.getItem('name'))
-                    console.log(historySign, " ", historyName); 
-                    sign = historySign; 
-                    buildURL(sign); 
-                   
-                }
-            }
+        if (window.document.title === "Tarot") {
+            tarot();
         }
-        else {
-            tarot(); 
+        else if (window.document.title === "Astrozoders") {
+            if (!localStorage.getItem('name')) {
+                historySign = JSON.parse(localStorage.getItem('sign')); 
+                historyName = JSON.parse(localStorage.getItem('name'))
+                console.log(historySign, " ", historyName); 
+                sign = historySign; 
+                buildURL(sign); 
+                index = true;
+            }            
+        } 
+        else { 
+            var sign = window.document.title;
+            console.log("Sign from title is: ", sign);
+            console.log("index flag set to: ", index);
+            index = false;
+            console.log("index flag set to: ", index);
+            buildURL(sign);                
+          
         }
     })
 
@@ -48,7 +47,7 @@ function clear() {
 $(".sign").on("click", function (event) {
     localStorage.clear(); 
     historyName =  $("#name").val().trim();
-    // historySign = ""; 
+    
     console.log("local storage cleared: ", localStorage.getItem('nam'), "historyname: ", historyName);
     var sign = this.id;
     buildURL(sign);
@@ -58,7 +57,8 @@ function buildURL(sign) {
 
     console.log("event listner activated");
     if (index) {
-        
+        console.log("index: ", index); 
+        console.log("historyName: ", historyName);
         if (historyName === null ) {          
             
             full_name = $("#name").val().trim();
