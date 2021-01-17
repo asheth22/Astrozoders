@@ -63,7 +63,12 @@
 .color-gemini:hover {
   background-color: #bd1a15 !important;
 }
-
+section {
+  margin-top: 50px !important;
+}
+aside {
+  margin-top: 50px !important;
+}
 
 .footer {
   position: fixed;
