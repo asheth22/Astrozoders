@@ -13,6 +13,7 @@ var tarotID;
 
     $(document).ready(function(){ 
         
+        $('.sidenav').sidenav();
          console.log(window.document.title);
         if (window.document.title !== "Tarot") {
             if (window.document.title !== "Astrozoders") {

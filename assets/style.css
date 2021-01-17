@@ -1,6 +1,23 @@
+
 html {
+  background: url(./photos/zodiac.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home-page {
   background: url(./photos/cosmos.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.tarot-page {
+  background: url(./photos/tarot.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 .color {
@@ -46,10 +63,7 @@ html {
 .color-gemini:hover {
   background-color: #bd1a15 !important;
 }
-.signs {
-  height: 80px;
-  width: 100%;
-}
+
 
 .footer {
   position: fixed;
@@ -97,27 +111,26 @@ html {
 #gemini:hover {
   background-color: #bd1a15 !important;
 }
+.container {
+  max-width: 90%;
+  min-width: 90%;
+ 
+}
 #about {
   color: white;
-  font-size: larger;
-  display: flex;
-  margin: auto;
-  margin-left: 10px;
-  /* margin-top: 10px; */
   text-align: left;
-  justify-content: lwft;
-  text-justify: distribute;
+  justify-content: left;
 }
 
 .signs {
   color: ivory;
-
   text-align: center;
   justify-content: center;
 }
 
 .daily {
   color: ivory;
+  
 }
 
 li {
@@ -152,7 +165,7 @@ li {
 #name {
   width: 75%;
 }
-#tarot-layout {
+.tcard {
   display: flex;
   /* margin-left: 20px;
   margin-right: 20px;
@@ -189,15 +202,26 @@ h6 {
 p {
   cursor: pointer;
 }
-
+.row {
+  margin-top: 20px;
+}
 
 @media (max-width: 690px) {
   .s1 {
     font-size: 1rem;
   }
 
-  /* .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px; */
+  html {
+    background: url(./assets/photos/cosmos.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;      
   }
+  }
+
+  @media only screen and (min-width: 993px) {
+  .container {
+      width: 90%;
+  }
+}
