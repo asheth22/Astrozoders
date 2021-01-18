@@ -6,7 +6,11 @@ The application uses twp APIs:
 1. [aztro's API](https://aztro.sameerkumar.website?) to retrieve daily horoscope for each of the suns igns.
 2. [Tarot Card API](https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=16) to retrieve tarot cards.
 
-The application uses the "materialize CSS CDN" and uses the modals to display messages to the user. 
+The application uses:
+>  HTML, CSS, JavaScript and JQuery
+> CSS Frameworks: materialize CDN and W3-CSS
+> AJAX for asyncronous calls to APIs
+> Modals instead of alerts or prompts
 
 ## Application Features
 
@@ -21,11 +25,7 @@ The tarot page presents the user 10 randomly selected tarot cards. The user is a
 
 ## Mock-Up
 
-The following is demo of the application
-
-![Demo]()
-
-
+The following is demo of the application [Astrozoders-Demo](https://github.com/asheth22/Astrozoders/blob/main/assets/AstrozodersDemo.gif)
 ## Application URL   
 
 * The URL of the deployed application is [Astrozoders](https://asheth22.github.io/Astrozoders/)
