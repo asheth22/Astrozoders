@@ -25,7 +25,7 @@ The tarot page presents the user 10 randomly selected tarot cards. The user is a
 
 ## Mock-Up
 
-Demo of the application [Astrozoders-Demo](https://github.com/asheth22/Astrozoders/blob/main/assets/AstrozodersDemo.gif)
+Demo of the application [Astrozoders-Demo](https://github.com/asheth22/Astrozoders/blob/main/assets/AstrozodersDemo.png)
 ## Application URL   
 
 * The URL of the deployed application is [Astrozoders](https://asheth22.github.io/Astrozoders/)
