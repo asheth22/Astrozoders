@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- References to various style files -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="./assets/style.css" />
@@ -53,28 +54,28 @@
     <li><a class="waves-effect waves-dark btn" href="tarot.html">Tarot</a></li>
   </ul>
   <div class="container">
-  <section class="row">
-    <div class="col s12 m4" id="about">
+    <section class="row">
+      <div class="col s12 m4" id="about">
 
-      <div class="name-label" id="name-label">
-        <h6><b>Please Enter Your Name: </b></h6>
-        <span> <input id="name" type="text"> </span> 
-        <a id = "clear" class="waves-effect waves-light btn-small">Clear </a>
-        <h6> Did you Know?</h6>
+        <h4> Did you Know?</h4>
         <p> Your zodiac sign can tell a lot about your personality key traits, and preferences.
 
-        <h6> What does the Sun Sign mean? </h6>
-        <p> Your <b> Sun Sign </b> is the sign of the Zodiac where the Sun was situated at the moment of a person's birth.
-          It is associated with the essential qualities of one's character and with the pupose for which you are born.. 
+        <h5> What does the Sun Sign mean? </h5>
+        
+        <p> Your <b> Sun Sign </b> is the sign of the Zodiac where the Sun was situated at the moment of a person's
+          birth.
+          It is associated with the essential qualities of one's character and with the pupose for which you are born..
         </p> <br>
 
-        <h6> What is a <b> Horoscope</b>? </h6>
+        <h5> What is a <b> Horoscope</b>? </h5>
         <p> <b> Horoscope</b> is a forecast or predication of your future based on the influece of celestial bodies such
           as the sun, moon and the planets.
         </p><br>
 
-        <h6> What is a Tarot reading?</h6>
-        <p> <b> Tarot card</b> reading is the practice of using tarot cards to gain insight into the past, present or future by formulating a question, then drawing and interpreting cards. Reading tarot cards is a type of cartomancy.
+        <h5> What is a Tarot reading?</h5>
+        <p> <b> Tarot card</b> reading is the practice of using tarot cards to gain insight into the past, present or
+          future by formulating a question, then drawing and interpreting cards. Reading tarot cards is a type of
+          cartomancy.
         </p>
         <div id="modal1" class="modal">
           <div class="modal-content">
@@ -85,75 +86,77 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
           </div>
         </div>
+        
       </div>
+      <div class="col s12 m4 signs">
+        <h6><b>Please Enter Your Name: </b></h6>
+        <span> <input id="name" type="text"> </span>
+        <h5> Choose your Sun Sign </h5> </br>
 
+        <div class="w3-card w3-hover-yellow sign" id="aries">
+          <h6><b>♈ Aries</b></h6>
+          <p> Mar 21th –Apr 19th </p>
+        </div>
+        <div class="w3-card w3-hover-orange sign" id="taurus">
+          <h6><b>♉ Taurus</b></h6>
+          <p> Apr 20th – May 20th </p>
+        </div>
+        <div class="w3-card w3-hover-red sign" id="gemini">
+          <h6><b>♊ Gemini</b></h6>
+          <p> May 21st – Jun 21st </p>
+        </div>
+        <div class="w3-card w3-hover-purple sign" id="cancer">
+          <h6><b>♋ Cancer</b></h6>
+          <p> Jun 22nd - Jul 22nd </p>
+        </div>
+        <div class="w3-card w3-hover-deep-purple sign" id="leo">
+          <h6><b>♌ Leo</b></h6>
+          <p> Ju1 23rd - Aug 23rd </p>
+        </div>
+        <div class="w3-card w3-hover-indigo sign" id="virgo">
+          <h6><b>♍ Virgo</b></h6>
+          <p> Aug 23rd - Sep 22rd </p>
+        </div>
+        <div class="w3-card w3-hover-blue sign" id="libra">
+          <h6><b>♎ Libra </b></h6>
+          <p> Sep 23rd - Oct 23rd </p>
+        </div>
+        <div class="w3-card w3-hover-light-green sign" id="scorpio">
+          <h6><b>♏ Scorpio </b></h6>
+          <p> Oct 24th - Nov 21st </p>
+        </div>
+        <div class="w3-card w3-hover-green sign" id="sagittarius">
+          <h6><b>♐ Sagittarius </b></h6>
+          <p> Nov 22nd - Dec 21st </p>
+        </div>
+        <div class="w3-card w3-hover-lime sign" id="capricorn">
+          <h6><b>♑ Capricorn </b></h6>
+          <p> Dec 22nd - Jan 18th </p>
+        </div>
+        <div class="w3-card w3-hover-deep-orange sign" id="aquarius">
+          <h6><b>♒ Aquarius </b></h6>
+          <p> Jan 20th - Feb 18th </p>
+        </div>
+        <div class="w3-card w3-hover-amber sign" id="pisces">
+          <h6><b>♓ Pisces </b></h6>
+          <p> Feb 19th - Mar 20th </p>
+        </div>
 
+        <section> 
+          
+          <h6> Click the Clear button to remove search history</h6>
 
-    </div>
-    <div class="col s12 m4 signs">
-      <h5> Choose your Sun Sign </h5> </br>
+          <a id="clear" class="waves-effect waves-light btn-small">Clear </a> 
+        </section>
+      </div>
+      <aside class="col s12 m4 curr-hor daily">
 
-      <div class="w3-card w3-hover-yellow sign" id="aries">
-        <h6><b>♈ Aries</b></h6>
-        <p> Mar 21th –Apr 19th </p> 
-      </div>
-      <div class="w3-card w3-hover-orange sign" id="taurus">
-        <h6><b>♉ Taurus</b></h6>
-        <p> Apr 20th – May 20th </p>
-      </div>
-      <div class="w3-card w3-hover-red sign" id="gemini">
-        <h6><b>♊ Gemini</b></h6>
-        <p> May 21st – Jun 21st </p>
-      </div>
-      <div class="w3-card w3-hover-purple sign" id="cancer">
-        <h6><b>♋ Cancer</b></h6>
-        <p> Jun 22nd - Jul 22nd </p>
-      </div>
-      <div class="w3-card w3-hover-deep-purple sign" id="leo">
-        <h6><b>♌ Leo</b></h6>
-        <p> Ju1 23rd - Aug 23rd </p>
-      </div>
-      <div class="w3-card w3-hover-indigo sign" id="virgo">
-        <h6><b>♍ Virgo</b></h6>
-        <p> Aug 23rd - Sep 22rd </p>
-      </div>
-      <div class="w3-card w3-hover-blue sign" id="libra">
-        <h6><b>♎ Libra </b></h6>
-        <p> Sep 23rd - Oct 23rd </p>
-      </div>
-      <div class="w3-card w3-hover-light-green sign" id="scorpio">
-        <h6><b>♏ Scorpio </b></h6>
-        <p> Oct 24th - Nov 21st </p>
-      </div>
-      <div class="w3-card w3-hover-green sign" id="sagittarius">
-        <h6><b>♐ Sagittarius </b></h6>
-        <p> Nov 22nd - Dec 21st </p>
-      </div>
-      <div class="w3-card w3-hover-lime sign" id="capricorn">
-        <h6><b>♑ Capricorn </b></h6>
-        <p> Dec 22nd - Jan 18th </p>
-      </div>
-      <div class="w3-card w3-hover-deep-orange sign" id="aquarius">
-        <h6><b>♒ Aquarius </b></h6>
-        <p> Jan 20th - Feb 18th </p>
-      </div>
-      <div class="w3-card w3-hover-amber sign" id="pisces">
-        <h6><b>♓ Pisces </b></h6>
-        <p> Feb 19th - Mar 20th </p>
-      </div>
-
-    </div>
-    <div class="col s12 m4 curr-hor daily">
-    </div>
-  </section>
-</div>  
-
-</br>
-</br>
-
-  
-
+      </aside>
+    </section>
   </div>
+
+  </br>
+  </br>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
@@ -161,6 +164,6 @@
   <script src="./assets/script.js"></script>
 
 
-</body>
+  </body>
 
 </html>
