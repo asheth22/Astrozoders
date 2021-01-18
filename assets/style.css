@@ -28,40 +28,40 @@
   border-top-right-radius: 30px;
 }
 .color-aries:hover {
-  background-color: #ffeb3b !important;
+  background-color: #ffeb3b;
 }
 .color-taurus:hover {
-  background-color: #ff9800 !important;
+  background-color: #ff9800;
 }
 .color-leo:hover {
-  background-color: #520748 !important;
+  background-color: #520748;
 }
 .color-capricorn:hover {
-  background-color: #71c018 !important;
+  background-color: #71c018;
 }
 .color-libra:hover {
-  background-color: #1a8bf5 !important;
+  background-color: #1a8bf5;
 }
 .color-scorpio:hover {
-  background-color: #0d9482 !important;
+  background-color: #0d9482;
 }
 .color-cancer:hover {
-  background-color: #af347c !important;
+  background-color: #af347c;
 }
 .color-sagitarius:hover {
-  background-color: #077446 !important;
+  background-color: #077446;
 }
 .color-aquarius:hover {
-  background-color: #e29d35 !important;
+  background-color: #e29d35;
 }
 .color-pisces:hover {
-  background-color: #b46e06 !important;
+  background-color: #b46e06;
 }
 .color-virgo:hover {
-  background-color: #130972 !important;
+  background-color: #130972;
 }
 .color-gemini:hover {
-  background-color: #bd1a15 !important;
+  background-color: #bd1a15;
 }
 section {
   margin-top: 50px !important;
@@ -81,40 +81,40 @@ aside {
 }
 
 #aries:hover {
-  background-color: #ffeb3b !important;
+  background-color: #ffeb3b;
 }
 #taurus:hover {
-  background-color: #ff9800 !important;
+  background-color: #ff9800;
 }
 #leo:hover {
-  background-color: #520748 !important;
+  background-color: #520748;
 }
 #capricorn:hover {
-  background-color: #71c018 !important;
+  background-color: #71c018;
 }
 #libra:hover {
-  background-color: #1a8bf5 !important;
+  background-color: #1a8bf5;
 }
 #scorpio:hover {
-  background-color: #0d9482 !important;
+  background-color: #0d9482;
 }
 #cancer:hover {
-  background-color: #af347c !important;
+  background-color: #af347c;
 }
 #sagitarius:hover {
-  background-color: #077446 !important;
+  background-color: #077446;
 }
 #aquarius:hover {
-  background-color: #e29d35 !important;
+  background-color: #e29d35;
 }
 #pisces:hover {
-  background-color: #b46e06 !important;
+  background-color: #b46e06;
 }
 #virgo:hover {
-  background-color: #130972 !important;
+  background-color: #130972;
 }
 #gemini:hover {
-  background-color: #bd1a15 !important;
+  background-color: #bd1a15;
 }
 .container {
   max-width: 90%;
