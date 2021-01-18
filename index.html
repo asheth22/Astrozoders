@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- References to various style files -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="./assets/style.css" />
@@ -18,7 +19,7 @@
   <nav>
     <div class="nav-wrapper">
 
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu --></i></a>
       <ul class="left hide-on-med-and-down">
         <li lass="Home"><a href="index.html">Home</a></li>
         <li><a class="color-aries" href="aries.html">♈ Aries</a></li>
@@ -89,9 +90,16 @@
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
             </div>
+
           </div>
         </div>
+        
       </div>
+      <div class="col s12 m4 signs">
+        <h6><b>Please Enter Your Name: </b></h6>
+        <span> <input id="name" type="text"> </span>
+        <h5> Choose your Sun Sign </h5> </br>
+
 
       <!--Center of page where user will click their sun sign after entering name in input-->
       <div class="col s12 m4 signs">
@@ -145,13 +153,16 @@
           <h6><b>♓ Pisces </b></h6>
           <p> Feb 19th - Mar 20th </p>
         </div>
-      </div>
 
-      <!--This is where the daily horoscope will show once name and sun sign clicked-->
-      <div class="col s12 m4 curr-hor daily">
       </div>
+      <aside class="col s12 m4 curr-hor daily">
+
+  >>>>>>> main
     </section>
   </div>
+
+  </br>
+  </br>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
