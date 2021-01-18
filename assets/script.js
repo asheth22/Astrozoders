@@ -1,16 +1,14 @@
 // Declaring global variables
 var today = dayjs();
-today = today.format('MM/DD/YYYY');
 var full_name = "";
 var index;
 var tarotDesc = [];
 var tarotName = [];
 var historySign;
 var historyName;
-var modalFlag = true;
-var count = 0;
 var tarotID;
 
+today = today.format('MM/DD/YYYY');
 // Empty the current horoscope section of the page
 function clear() {
     console.log("inside clear");
@@ -162,7 +160,14 @@ $(".sign").on("click", function () {
 
 // Evennt listner for tarot cards
 $(".tarot").on("click", function () {
-    if (tarotID !== this.id) {
+    if (tarotID === this.id) {
+
+        console.log("Card Closed");
+        tarotID = "";
+        $(".modal-content").children("p").empty();
+        $(this).attr("data-state", "close");
+    }
+    else {
         tarotID = this.id
         console.log($(this).attr("data-state"));
         var index = this.id;
@@ -184,12 +189,6 @@ $(".tarot").on("click", function () {
         else {
             $(this).attr("data-state", "close");
         }
-    }
-    else {
-        console.log("Card Closed");
-        tarotID = "";
-        $(".modal-content").children("p").empty();
-        $(this).attr("data-state", "close");
     }
 });
 
